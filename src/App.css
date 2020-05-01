@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -37,7 +39,8 @@
   }
 }
 
-.card {
+.card_con {
+  position: relative;
   background-color: rgb(0, 0, 0);
   display: flex;
   flex-direction: row;
@@ -49,9 +52,20 @@
   margin: 0;
 }
 
+.card_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  height: 60vh;
+  padding: 0;
+  margin: 0;
+}
+
 .search_container {
-  position: fixed;
-  top: 45px;
+  position: absolute;
+  top: 25px;
 }
 
 .search {
@@ -63,19 +77,20 @@
   padding-right: 15px;
 }
 
-.search:focus {
+.search:focus,
+.search:hover {
   outline: none;
   box-shadow: 0 0 3px 1px #8deeff;
 }
 
 .img_container {
-  width: 60%;
+  width: 50%;
   height: 100%;
   overflow: hidden;
 }
 
 .text_container {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,10 +103,37 @@
 
 .title {
   color: white;
+  width: 70%;
+  font-size: 1.5rem;
 }
 
 .explanation {
   color: white;
-  font-size: 12px;
-  width: 40%;
+  font-size: 0.8rem;
+  width: 60%;
+  line-height: 1.4rem;
+}
+
+.b {
+  height: 1000px;
+  width: 1000px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 1000;
+}
+
+.navbar {
+  height: 50px;
+  color: white;
+  font-size: 1.5rem;
+  border-bottom: solid 2px darkgrey;
+}
+
+.dayPicker {
+  position: absolute;
+  left: 25px;
+  bottom: 75px;
 }
